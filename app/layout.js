@@ -4,6 +4,11 @@ import { site } from "../lib/site";
 export const metadata = {
   title: `${site.name} — ${site.headline}`,
   description: site.tagline,
+  openGraph: {
+    title: `${site.name} — ${site.headline}`,
+    description: site.tagline,
+    images: ["/images/deo-volente.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {

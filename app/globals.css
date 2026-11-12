@@ -14,7 +14,8 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .logo{font-weight:800;font-size:1.05rem;line-height:1.2;color:#fff;text-decoration:none;text-transform:capitalize}
 nav.main{display:flex;gap:20px;flex-wrap:wrap} nav.main a{color:#dceef5;text-decoration:none;font-weight:600;font-size:.95rem}
 .phone-pill{background:#fff;color:var(--navy)!important;padding:8px 16px;border-radius:999px;font-weight:800;text-decoration:none;white-space:nowrap}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,var(--teal) 130%);color:#fff;padding:84px 0 96px;text-align:center}
+.hero{background:linear-gradient(rgba(10,42,67,.82),rgba(10,42,67,.68) 55%,rgba(18,128,156,.72)),url("/images/hero.jpg") center/cover no-repeat;color:#fff;padding:96px 0 110px;text-align:center}
+.brand-card{width:min(480px,88vw);margin:0 auto 28px;border-radius:var(--radius);box-shadow:0 10px 34px rgba(0,0,0,.38)}
 .hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 16px}
 .hero p{font-size:1.2rem;color:#dceef5;max-width:640px;margin:0 auto 28px}
 .hero .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}

@@ -27,10 +27,10 @@ npm run dev        # http://localhost:3000
 Business name, phone, hours, about text, services, gallery list, pay-bill copy,
 newsletter offer — edit there and the whole site updates.
 
-- **Photos:** download the originals from the GoDaddy site builder (they're the
-  business's photos — the crawler can't pull the full-res gallery out of GoDaddy).
-  Drop them in as `public/gallery/gallery-1.jpg` … `gallery-6.jpg` and
-  `public/images/about.jpg`. No code change needed.
+- **Photos:** supplied by the owner Nov 12, 2026 and already in place —
+  `public/images/hero.jpg`, `public/images/about.jpg`, `public/images/deo-volente.jpg`
+  (brand graphic, also the social-share image), and `public/gallery/gallery-1.jpg`
+  … `gallery-7.jpg`. To swap one, replace the file with the same name.
 - **Colors / layout:** `app/globals.css` (variables at the top: `--navy`, `--teal`).
 - **Pages / sections:** `app/page.js`, header + footer in `app/layout.js`.
 
@@ -59,8 +59,10 @@ The original site's payment link pointed at a `deovolentemarine.com` cart page
 that no longer resolves, so it was **not** carried over.
 
 ## Still needed from the business owner
-1. The 6 gallery photos + an about photo (from GoDaddy)
-2. A working pay-bill link
-3. Confirmation of the services list (see placeholder note above)
-4. The domain name to point at Vercel
-5. (Optional) An email destination / Supabase project if they want form alerts
+1. A working pay-bill link
+2. Confirmation of the services list (see placeholder note above)
+3. The domain name to point at Vercel
+4. (Optional) An email destination / Supabase project if they want form alerts
+5. Confirm whether the site name should become “Deo Volente Marine & Fiberglass
+   Repair” (from the brand graphic) instead of the GoDaddy site's generic
+   “Your Local Mobile Marine Repair” — one line in `lib/site.js` (`name`).

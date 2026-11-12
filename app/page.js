@@ -8,6 +8,9 @@ export default function Home() {
       {/* HERO — from the original site */}
       <div className="hero">
         <div className="wrap">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="brand-card" src="/images/deo-volente.jpg"
+            alt="Deo Volente — marine & fiberglass repair" />
           <h1>{site.headline}</h1>
           <p>{site.tagline}</p>
           <div className="row">
@@ -28,10 +31,8 @@ export default function Home() {
             <p>{site.about.body}</p>
             <a className="btn" href="#contact">Book a Repair</a>
           </div>
-          {/* Falls back gracefully until public/images/about.jpg is added */}
-          <div className="img-fallback">
-            Add the business photo at<br />public/images/about.jpg
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={site.about.image} alt="Marine mechanic servicing an outboard engine" />
         </div>
       </section>
 

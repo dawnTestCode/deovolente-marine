@@ -61,15 +61,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PAY YOUR BILL */}
-      <section id="pay" className="tint">
-        <div className="wrap center">
-          <h2 className="title">{site.payBill.title}</h2>
-          <p className="lede">{site.payBill.body}</p>
-          <a className="btn" href={site.payBill.url}>{site.payBill.button}</a>
-        </div>
-      </section>
-
       {/* CONTACT */}
       <section id="contact">
         <div className="wrap">

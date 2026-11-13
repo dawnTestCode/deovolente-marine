@@ -15,6 +15,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        {site.promo && (
+          <div className="promo">
+            <div className="wrap promo-in">
+              <p className="promo-text">
+                {site.promo.title} — <span className="promo-price">{site.promo.price}</span>
+                <span className="promo-note">{site.promo.note}</span>
+              </p>
+              <a className="btn alt" href={site.phoneHref}>{site.promo.button}</a>
+            </div>
+          </div>
+        )}
         <header className="site">
           <div className="wrap">
             <a className="logo" href="/">{site.name}</a>
@@ -22,7 +33,6 @@ export default function RootLayout({ children }) {
               <a href="/#about">About</a>
               <a href="/#services">Services</a>
               <a href="/#gallery">Gallery</a>
-              <a href="/#pay">Pay Your Bill</a>
               <a href="/#contact">Contact</a>
             </nav>
             <a className="phone-pill" href={site.phoneHref}>{site.phoneDisplay}</a>

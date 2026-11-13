@@ -1,4 +1,4 @@
-# Your Local Mobile Marine Repair — Next.js recreation
+# Deo Volente Marine & Fiberglass Repair — Next.js site
 
 A clean recreation of https://yourlocalmobilemarinerepair.godaddysites.com/ as a
 self-hosted **Next.js (App Router)** site. Deploy it on **Vercel**, point a domain
@@ -9,7 +9,7 @@ Recreated faithfully from the original:
 - Phone **252-521-1130** (tap-to-call in the header, hero, and footer)
 - About / Expert Marine Mechanics section (inboard + outboard)
 - Transformations gallery (6 slots)
-- “Pay Your Bill Online Easily” section
+- Winterization promo banner at the top of the page (text/price in `lib/site.js`)
 - Contact section — “By Appointment”, “Drop us a line!” form (Name / Email / Phone / Message)
 - Subscribe section — “Get 10% off your first purchase…”
 - The original `/shop` page was empty and its Featured Products section listed
@@ -52,11 +52,10 @@ submission to Vercel's function logs (demo mode). To save them for real:
    (Project Settings → API in Supabase). Redeploy.
 Submissions then land in the `contact_messages` and `newsletter_subscribers` tables.
 
-## Pay Your Bill button
-Set `NEXT_PUBLIC_PAY_BILL_URL` in Vercel to a Stripe Payment Link / Square /
-other payment page, or paste the URL into `lib/site.js` (`payBill.url`).
-The original site's payment link pointed at a `deovolentemarine.com` cart page
-that no longer resolves, so it was **not** carried over.
+## Promo banner
+
+The banner at the top of the page (currently “Boat Winterization — $400”) is
+`promo` in `lib/site.js` — edit the text/price there, or delete the block to remove it.
 
 ## Still needed from the business owner
 1. A working pay-bill link
@@ -65,4 +64,4 @@ that no longer resolves, so it was **not** carried over.
 4. (Optional) An email destination / Supabase project if they want form alerts
 5. Confirm whether the site name should become “Deo Volente Marine & Fiberglass
    Repair” (from the brand graphic) instead of the GoDaddy site's generic
-   “Your Local Mobile Marine Repair” — one line in `lib/site.js` (`name`).
+   “Deo Volente Marine & Fiberglass Repair” — one line in `lib/site.js` (`name`).

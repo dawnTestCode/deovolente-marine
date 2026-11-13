@@ -1,4 +1,4 @@
-import "./v2/v2.css";
+import "./home.css";
 import { site } from "../lib/site";
 import { ContactForm, SubscribeForm } from "../components/Forms";
 

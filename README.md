@@ -69,9 +69,9 @@ The banner at the top of the page (currently “Boat Winterization — $400”) 
 ## Design
 
 The homepage IS the Nov 2026 redesign (promoted from a /v2 preview on
-Nov 13, 2026 with the owner's approval; /v2 now redirects home):
+Nov 13, 2026 with the owner's approval; the /v2 preview route was removed afterward):
 work-truck signage look in the logo's blues + gentle gold, mobile-first hero
 ("MOBILE MARINE REPAIR", 35 years of experience), trust strip, fiberglass
 service, winterization first with the $400 flat price, 3-step "how mobile
 service works", contact + subscribe forms, sticky call bar on phones.
-Homepage source: `app/page.js`, styles: `app/v2/v2.css`.
+Homepage source: `app/page.js`, styles: `app/home.css`.

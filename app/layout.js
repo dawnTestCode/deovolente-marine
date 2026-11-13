@@ -2,10 +2,10 @@ import "./globals.css";
 import { site } from "../lib/site";
 
 export const metadata = {
-  title: `${site.name} — ${site.headline}`,
+  title: `${site.name} — Mobile Marine Repair`,
   description: site.tagline,
   openGraph: {
-    title: `${site.name} — ${site.headline}`,
+    title: `${site.name} — Mobile Marine Repair`,
     description: site.tagline,
     images: ["/images/deo-volente.jpg"],
   },
@@ -14,39 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {site.promo && (
-          <div className="promo">
-            <div className="wrap promo-in">
-              <p className="promo-text">
-                {site.promo.title} — <span className="promo-price">{site.promo.price}</span>
-                <span className="promo-note">{site.promo.note}</span>
-              </p>
-              <a className="btn alt" href={site.phoneHref}>{site.promo.button}</a>
-            </div>
-          </div>
-        )}
-        <header className="site">
-          <div className="wrap">
-            <a className="logo" href="/">{site.name}</a>
-            <nav className="main">
-              <a href="/#about">About</a>
-              <a href="/#services">Services</a>
-              <a href="/#gallery">Gallery</a>
-              <a href="/#contact">Contact</a>
-            </nav>
-            <a className="phone-pill" href={site.phoneHref}>{site.phoneDisplay}</a>
-          </div>
-        </header>
-        {children}
-        <footer>
-          <div className="wrap">
-            <p><strong style={{ color: "#fff", textTransform: "capitalize" }}>{site.name}</strong></p>
-            <p><a href={site.phoneHref}>{site.phoneDisplay}</a> · By Appointment</p>
-            <p>Copyright © {new Date().getFullYear()} {site.name} — All Rights Reserved.</p>
-          </div>
-        </footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

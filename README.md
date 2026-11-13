@@ -66,11 +66,12 @@ The banner at the top of the page (currently “Boat Winterization — $400”) 
    Repair” (from the brand graphic) instead of the GoDaddy site's generic
    “Deo Volente Marine & Fiberglass Repair” — one line in `lib/site.js` (`name`).
 
-## Redesign preview (/v2)
+## Design
 
-A ground-up redesign lives at `/v2` (noindexed, not linked from the main site):
-work-truck signage look, mobile-first hero ("MOBILE MARINE REPAIR", 35 years of
-experience), trust strip, fiberglass service, 3-step "how mobile service works",
-sticky call bar on phones. Source: `app/v2/page.js` + `app/v2/v2.css`.
-To promote it: replace `app/page.js` with the v2 layout and drop the preview
-chrome-hiding style in the v2 page.
+The homepage IS the Nov 2026 redesign (promoted from a /v2 preview on
+Nov 13, 2026 with the owner's approval; /v2 now redirects home):
+work-truck signage look in the logo's blues + gentle gold, mobile-first hero
+("MOBILE MARINE REPAIR", 35 years of experience), trust strip, fiberglass
+service, winterization first with the $400 flat price, 3-step "how mobile
+service works", contact + subscribe forms, sticky call bar on phones.
+Homepage source: `app/page.js`, styles: `app/v2/v2.css`.

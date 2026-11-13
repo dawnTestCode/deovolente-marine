@@ -1,71 +1,181 @@
+import "./v2/v2.css";
 import { site } from "../lib/site";
 import { ContactForm, SubscribeForm } from "../components/Forms";
-import { Gallery } from "../components/Gallery";
+
+export const metadata = {
+  title: "Deo Volente Marine & Fiberglass Repair — Mobile Marine Repair",
+  description:
+    "Mobile marine repair with 35 years of experience. Inboard, outboard and fiberglass — we come to your dock, marina or driveway.",
+};
+
+const TRUST = [
+  "35+ Years Experience",
+  "Fully Mobile — We Come to You",
+  "Inboard & Outboard",
+  "Fiberglass & Gelcoat",
+  "Fair, Upfront Pricing",
+];
+
+const SERVICES = [
+  {
+    title: "Winterization",
+    body: "Full winterization done right, before the cold sets in. One flat price, no surprises.",
+    price: "$400 flat",
+    badge: "Seasonal Special",
+  },
+  {
+    title: "Outboard Engine Repair",
+    body: "Diagnostics, repair and service for outboards of all makes and sizes — at your dock, not a shop across town.",
+  },
+  {
+    title: "Inboard Engine Repair",
+    body: "Inboard diagnostics, repair and maintenance to keep you on the water all season.",
+  },
+  {
+    title: "Fiberglass & Gelcoat Repair",
+    body: "Holes, cracks, dings and dock rash — structural fiberglass repair and gelcoat finishing.",
+  },
+  {
+    title: "Spring Commissioning",
+    body: "De-winterize, tune and check everything over so the first launch of the season just works.",
+  },
+  {
+    title: "Diagnostics & Troubleshooting",
+    body: "Not sure what's wrong? We'll find the fault and talk you through the fix and the cost — before any work starts.",
+  },
+  {
+    title: "Routine Maintenance",
+    body: "Seasonal service, tune-ups and checks so small issues never turn into big bills.",
+  },
+];
+
+const STEPS = [
+  { n: "1", title: "You Call", body: "Tell us what's going on with the boat. You talk to a mechanic, not a call center." },
+  { n: "2", title: "We Come to You", body: "Dock, marina or driveway — the shop comes to your boat, on an appointment that fits your schedule." },
+  { n: "3", title: "Back on the Water", body: "Quality work at a fair price, done where your boat sits. No hauling, no waiting rooms." },
+];
 
 export default function Home() {
   return (
-    <main>
-      {/* HERO — from the original site */}
-      <div className="hero">
-        <div className="wrap">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-card" src="/images/deo-volente.jpg"
-            alt="Deo Volente — marine & fiberglass repair" />
-          <h1>{site.headline}</h1>
-          <p>{site.tagline}</p>
-          <div className="row">
-            <a className="btn alt" href={site.phoneHref}>Call {site.phoneDisplay}</a>
-            <a className="btn" href="#contact" style={{ background: "transparent", border: "2px solid #fff" }}>
-              Drop Us a Line
-            </a>
-          </div>
-        </div>
+    <div className="v2">
+      {/* SEASONAL STRIP */}
+      <div className="v2-strip">
+        <span>BOAT WINTERIZATION — <strong>$400 FLAT</strong></span>
+        <a href={site.phoneHref}>Call to Book</a>
       </div>
 
-      {/* ABOUT */}
-      <section id="about">
-        <div className="wrap split">
-          <div>
-            <h2 style={{ marginTop: 0 }}>{site.about.title}</h2>
-            <h3>{site.about.heading}</h3>
-            <p>{site.about.body}</p>
-            <a className="btn" href="#contact">Book a Repair</a>
+      {/* HEADER */}
+      <header className="v2-head">
+        <div className="v2-wrap v2-head-in">
+          <div className="v2-logo">
+            DEO VOLENTE
+            <small>MARINE &amp; FIBERGLASS REPAIR</small>
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={site.about.image} alt="Marine mechanic servicing an outboard engine" />
+          <a className="v2-callbtn" href={site.phoneHref}>☎ {site.phoneDisplay}</a>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="v2-hero">
+        <div className="v2-wrap">
+          <p className="v2-eyebrow">North Carolina · By Appointment</p>
+          <h1>MOBILE<br />MARINE REPAIR</h1>
+          <p className="v2-sub">
+            <strong>35 years of experience.</strong> Quality work, hard work, and a fair
+            price — and we come to your dock, marina, or driveway.
+          </p>
+          <div className="v2-cta">
+            <a className="v2-btn v2-btn-orange" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+            <a className="v2-btn v2-btn-ghost" href="#v2-services">See Services</a>
+          </div>
         </div>
       </section>
 
-      {/* SERVICES / FEATURED */}
-      <section id="services" className="alt">
-        <div className="wrap">
-          <h2 className="title">Featured Services</h2>
-          <p className="lede">Inboard and outboard specialists — mobile, so the shop comes to you.</p>
-          <div className="grid">
-            {site.services.map((s) => (
-              <article className="card" key={s.title}>
+      {/* TRUST STRIP */}
+      <div className="v2-trust">
+        <div className="v2-wrap v2-trust-in">
+          {TRUST.map((t) => (
+            <span key={t}>{t}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* SERVICES */}
+      <section className="v2-sec" id="v2-services">
+        <div className="v2-wrap">
+          <h2 className="v2-h2">What We Do</h2>
+          <p className="v2-lede">Engine work and fiberglass — done at your boat, wherever it sits.</p>
+          <div className="v2-grid">
+            {SERVICES.map((s) => (
+              <article className="v2-card" key={s.title}>
+                {s.badge && <span className="v2-badge">{s.badge}</span>}
                 <h3>{s.title}</h3>
-                <p>{s.description}</p>
+                <p>{s.body}</p>
+                {s.price && <p className="v2-price">{s.price}</p>}
               </article>
             ))}
           </div>
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="v2-sec v2-dark">
+        <div className="v2-wrap">
+          <h2 className="v2-h2">How Mobile Service Works</h2>
+          <div className="v2-steps">
+            {STEPS.map((s) => (
+              <div className="v2-step" key={s.n}>
+                <span className="v2-num">{s.n}</span>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="v2-sec">
+        <div className="v2-wrap v2-split">
+          <div>
+            <h2 className="v2-h2" style={{ textAlign: "left" }}>35 Years Turning Wrenches</h2>
+            <p>
+              Deo Volente is built on 35 years of marine mechanic experience — inboard and
+              outboard engines, fiberglass and gelcoat. No shop overhead passed on to you,
+              no work you didn&apos;t approve, and no guessing: you hear what&apos;s wrong,
+              what it costs, and what it takes to fix it before the work starts.
+            </p>
+            <p>
+              The business is mobile on purpose. Your boat doesn&apos;t need a trailer ride
+              to get fixed — we bring the tools to you.
+            </p>
+            <a className="v2-btn v2-btn-navy" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="v2-about-img" src="/images/about.jpg"
+            alt="Marine mechanic servicing an outboard engine" />
+        </div>
+      </section>
+
       {/* GALLERY */}
-      <section id="gallery">
-        <div className="wrap">
-          <h2 className="title">Boat Repair Transformations</h2>
-          <p className="lede">Explore our boat repair transformations gallery.</p>
-          <Gallery items={site.gallery} />
+      <section className="v2-sec v2-paper">
+        <div className="v2-wrap">
+          <h2 className="v2-h2">Recent Work</h2>
+          <div className="v2-gallery">
+            {site.gallery.map((g) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={g.src} src={g.src} alt={g.alt} loading="lazy" />
+            ))}
+          </div>
+          <p className="v2-note">Photos shown are placeholders — real job photos coming soon.</p>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact">
-        <div className="wrap">
-          <h2 className="title">Contact Us</h2>
-          <p className="lede">
+      <section className="v2-sec" id="contact">
+        <div className="v2-wrap">
+          <h2 className="v2-h2">Drop Us a Line</h2>
+          <p className="v2-lede">
             <strong>Better yet, see us in person!</strong><br />
             {site.hoursNote}
           </p>
@@ -74,20 +184,39 @@ export default function Home() {
               <tr key={h.days}><td>{h.days}</td><td><strong>{h.time}</strong></td></tr>
             ))}
           </tbody></table>
-          <div style={{ height: 36 }} />
-          <h3 className="center">Drop us a line!</h3>
+          <div style={{ height: 30 }} />
           <ContactForm />
         </div>
       </section>
 
       {/* SUBSCRIBE */}
-      <section className="alt">
-        <div className="wrap">
-          <h2 className="title">{site.subscribe.title}</h2>
-          <p className="lede">{site.subscribe.offer}</p>
+      <section className="v2-sec v2-paper">
+        <div className="v2-wrap">
+          <h2 className="v2-h2">{site.subscribe.title}</h2>
+          <p className="v2-lede">{site.subscribe.offer}</p>
           <SubscribeForm />
         </div>
       </section>
-    </main>
+
+      {/* SERVICE AREA + BIG CTA */}
+      <section className="v2-cta-band">
+        <div className="v2-wrap">
+          <h2>BOAT DOWN?</h2>
+          <p>Serving North Carolina docks, marinas and driveways — call and we&apos;ll tell you straight whether we can get to you.</p>
+          <a className="v2-bigcall" href={site.phoneHref}>{site.phoneDisplay}</a>
+          <p className="v2-cta-sub">By appointment · Inboard · Outboard · Fiberglass</p>
+        </div>
+      </section>
+
+      <footer className="v2-foot">
+        <div className="v2-wrap">
+          <p><strong>DEO VOLENTE MARINE &amp; FIBERGLASS REPAIR</strong></p>
+          <p>{site.phoneDisplay} · By Appointment</p>
+                  </div>
+      </footer>
+
+      {/* STICKY MOBILE CALL BAR */}
+      <a className="v2-sticky" href={site.phoneHref}>☎ Call {site.phoneDisplay}</a>
+    </div>
   );
 }

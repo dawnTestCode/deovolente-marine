@@ -1,7 +1,7 @@
 /* ===== Deo Volente v2 preview — work-truck signage look ===== */
 .v2{
-  --navy:#081f33; --navy2:#0c2d4a; --orange:#ff6b1a; --orange-d:#e85a0f;
-  --paper:#f6f3ec; --ink:#16242f; --muted:#5a6a76; --line:#e2ded2;
+  --navy:#07293d; --navy2:#0d4258; --blue:#1f9ac4; --gold:#d9a441; --gold-d:#a87c24;
+  --paper:#edf3f6; --ink:#16242f; --muted:#5a6a76; --line:#e2ded2;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   color:var(--ink); background:#fff;
 }
@@ -12,26 +12,27 @@
 }
 
 /* seasonal strip */
-.v2-strip{background:var(--orange);color:#fff;display:flex;justify-content:center;gap:18px;align-items:center;flex-wrap:wrap;padding:10px 16px;font-weight:700;letter-spacing:.06em;font-size:.95rem;text-align:center}
-.v2-strip a{background:#fff;color:var(--orange-d);padding:5px 16px;border-radius:999px;text-decoration:none;font-weight:800;white-space:nowrap}
+.v2-strip{background:var(--navy);color:#fff;border-bottom:2px solid var(--gold);display:flex;justify-content:center;gap:18px;align-items:center;flex-wrap:wrap;padding:10px 16px;font-weight:700;letter-spacing:.06em;font-size:.95rem;text-align:center}
+.v2-strip strong{color:var(--gold)}
+.v2-strip a{background:var(--gold);color:var(--navy);padding:5px 16px;border-radius:999px;text-decoration:none;font-weight:800;white-space:nowrap}
 
 /* header */
 .v2-head{background:var(--navy);color:#fff}
 .v2-head-in{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px}
 .v2-logo{font-size:1.7rem;font-weight:900;line-height:1;text-transform:uppercase}
-.v2-logo small{display:block;font-size:.68rem;letter-spacing:.34em;font-weight:700;color:var(--orange);margin-top:4px;font-family:system-ui,sans-serif}
-.v2-callbtn{background:var(--orange);color:#fff!important;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:8px;white-space:nowrap;font-size:1.05rem}
-.v2-callbtn:hover{background:var(--orange-d)}
+.v2-logo small{display:block;font-size:.68rem;letter-spacing:.34em;font-weight:700;color:var(--gold);margin-top:4px;font-family:system-ui,sans-serif}
+.v2-callbtn{background:var(--gold);color:var(--navy)!important;text-decoration:none;font-weight:800;padding:12px 22px;border-radius:8px;white-space:nowrap;font-size:1.05rem}
+.v2-callbtn:hover{background:var(--gold-d);color:#fff!important}
 
 /* hero */
-.v2-hero{background:linear-gradient(rgba(8,31,51,.88),rgba(8,31,51,.72) 60%,rgba(8,31,51,.85)),url("/images/hero.jpg") center/cover no-repeat;color:#fff;padding:84px 0 96px}
-.v2-eyebrow{color:var(--orange);font-weight:800;letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;margin:0 0 14px}
+.v2-hero{background:linear-gradient(rgba(7,41,61,.88),rgba(13,66,88,.72) 60%,rgba(7,41,61,.85)),url("/images/hero.jpg") center/cover no-repeat;color:#fff;padding:84px 0 96px}
+.v2-eyebrow{color:#7cc6e4;font-weight:800;letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;margin:0 0 14px}
 .v2-hero h1{font-size:clamp(3.2rem,9vw,6.2rem);line-height:.94;margin:0 0 20px;font-weight:900;text-transform:uppercase}
 .v2-sub{font-size:1.28rem;max-width:620px;margin:0 0 32px;color:#e8eff5}
 .v2-cta{display:flex;gap:14px;flex-wrap:wrap}
 .v2-btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:8px;font-size:1.05rem}
-.v2-btn-orange{background:var(--orange);color:#fff!important}
-.v2-btn-orange:hover{background:var(--orange-d)}
+.v2-btn-orange{background:var(--gold);color:var(--navy)!important}
+.v2-btn-orange:hover{background:var(--gold-d);color:#fff!important}
 .v2-btn-ghost{border:2px solid #fff;color:#fff!important}
 .v2-btn-navy{background:var(--navy);color:#fff!important}
 .v2-btn-navy:hover{background:var(--navy2)}
@@ -40,7 +41,7 @@
 .v2-trust{background:#fff;border-bottom:3px solid var(--navy)}
 .v2-trust-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 22px;padding-top:16px;padding-bottom:16px}
 .v2-trust-in span{font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.92rem}
-.v2-trust-in span::before{content:"✓ ";color:var(--orange)}
+.v2-trust-in span::before{content:"✓ ";color:var(--blue)}
 
 /* sections */
 .v2-sec{padding:72px 0}
@@ -52,16 +53,16 @@
 
 /* services */
 .v2-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.v2-card{border:2px solid var(--line);border-top:6px solid var(--navy);border-radius:10px;padding:24px;background:#fff;position:relative}
+.v2-card{border:2px solid var(--line);border-top:6px solid var(--blue);border-radius:10px;padding:24px;background:#fff;position:relative}
 .v2-card h3{margin:0 0 8px;font-size:1.28rem;text-transform:uppercase}
 .v2-card p{margin:0;color:var(--muted)}
-.v2-price{margin-top:12px!important;color:var(--orange-d)!important;font-weight:900;font-size:1.3rem}
-.v2-badge{position:absolute;top:14px;right:14px;background:var(--orange);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.v2-price{margin-top:12px!important;color:var(--gold-d)!important;font-weight:900;font-size:1.3rem}
+.v2-badge{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
 
 /* steps */
 .v2-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:36px}
 .v2-step{text-align:center;padding:0 10px}
-.v2-num{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:var(--orange);color:#fff;font-size:1.9rem;font-weight:900;margin-bottom:14px}
+.v2-num{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:1.9rem;font-weight:900;margin-bottom:14px}
 .v2-step h3{margin:0 0 8px;font-size:1.35rem;text-transform:uppercase}
 .v2-step p{margin:0;color:#c6d5e0}
 
@@ -80,7 +81,7 @@
 .v2-cta-band{background:linear-gradient(120deg,var(--navy2),var(--navy));color:#fff;text-align:center;padding:76px 0}
 .v2-cta-band h2{font-size:clamp(2.4rem,6vw,3.6rem);margin:0 0 10px;font-weight:900}
 .v2-cta-band p{color:#c6d5e0;max-width:560px;margin:0 auto 22px}
-.v2-bigcall{display:inline-block;color:var(--orange)!important;text-decoration:none;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;letter-spacing:.02em}
+.v2-bigcall{display:inline-block;color:var(--gold)!important;text-decoration:none;font-size:clamp(2rem,6vw,3.2rem);font-weight:900;letter-spacing:.02em}
 .v2-cta-sub{margin-top:14px!important;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
 
 /* footer */
@@ -91,6 +92,6 @@
 /* sticky mobile call bar */
 .v2-sticky{display:none}
 @media (max-width:760px){
-  .v2-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--orange);color:#fff!important;text-align:center;font-weight:900;font-size:1.15rem;padding:16px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.25)}
+  .v2-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--gold);color:var(--navy)!important;text-align:center;font-weight:900;font-size:1.15rem;padding:16px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.25)}
   .v2-callbtn{display:none}
 }

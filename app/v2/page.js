@@ -18,6 +18,12 @@ const TRUST = [
 
 const SERVICES = [
   {
+    title: "Winterization",
+    body: "Full winterization done right, before the cold sets in. One flat price, no surprises.",
+    price: "$400 flat",
+    badge: "Seasonal Special",
+  },
+  {
     title: "Outboard Engine Repair",
     body: "Diagnostics, repair and service for outboards of all makes and sizes — at your dock, not a shop across town.",
   },
@@ -28,12 +34,6 @@ const SERVICES = [
   {
     title: "Fiberglass & Gelcoat Repair",
     body: "Holes, cracks, dings and dock rash — structural fiberglass repair and gelcoat finishing.",
-  },
-  {
-    title: "Winterization",
-    body: "Full winterization done right, before the cold sets in. One flat price, no surprises.",
-    price: "$400 flat",
-    badge: "Seasonal Special",
   },
   {
     title: "Spring Commissioning",
